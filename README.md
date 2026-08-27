@@ -1,0 +1,1 @@
+Run Code : g++ fileName -o run.exe && ./run.exe
