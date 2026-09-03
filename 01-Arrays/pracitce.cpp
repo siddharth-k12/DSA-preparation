@@ -1,14 +1,20 @@
 #include <iostream>
+#include <vector>
 using namespace std;
-
+ 
 int main(){
-    int arr[] = {1,2,3,4,5};
-    cout<<"enter number : ";
-    cin>>arr[2];
-    int size = sizeof(arr) / sizeof(int);
-    cout<<"---------------"<<endl;
-    for(int i = 0;i<size; i++){
-        cout<<arr[i]<<endl;
+   vector<int> arr = {1,1,3,4,4};
+    vector<int> newArr;
+// newArr.push_back(arr[0]);
+    for(int i=0;i<arr.size();i++){
+        newArr.push_back(arr[i]);
+        for(int j=1;j<arr.size();j++){
+            if(arr[i] == newArr[j]){ 
+                cout<<newArr[j]<<" "<<arr[j]<<endl;
+            }
+        }
     }
+
+
     return 0;
 }
