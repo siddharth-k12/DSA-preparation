@@ -1,20 +1,23 @@
 #include <iostream>
 #include <vector>
+#include<map>
+#include<set>
+#include<unordered_set>
+#include <algorithm>
 using namespace std;
  
 int main(){
-   vector<int> arr = {1,1,3,4,4};
-    vector<int> newArr;
-// newArr.push_back(arr[0]);
-    for(int i=0;i<arr.size();i++){
-        newArr.push_back(arr[i]);
-        for(int j=1;j<arr.size();j++){
-            if(arr[i] == newArr[j]){ 
-                cout<<newArr[j]<<" "<<arr[j]<<endl;
-            }
-        }
+    
+    vector<int> v = {5,2,11,7,5};
+    int target = 9;
+    
+    if(v.begin() != v.end()){
+        cout<<"yes";
     }
+    // for(int i = 0;i<v.size();i++){
+    //     int start = v[0];
 
 
+    // }
     return 0;
 }
