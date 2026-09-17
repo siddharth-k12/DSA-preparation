@@ -9,25 +9,25 @@ using namespace std;
  
 int main(){
     
- vector<int> nums = {0,0,1,2,1,1,2,2,3,3,4};
- // Output -> 2, nums = [1,2,_]
-vector<int> ans;//
-int check = nums.size();//2
-int i = 1;//0
-// int j = 1;//
-ans.push_back(nums[0]);
-    while (i < check)
-    {
-        /* code */
-       if(nums[i] != ans.back()){
-        ans.push_back(nums[i]);
-       }
-       i++;
-    //    j++;
+ vector<int> height = {1,8,6,2,5,4,8,3,7};
+//  height = [1,8,6,2,5,4,8,3,7]
+// Output: 49
+// max(4,4);
+    int maxVal = 0;
+    int left = 0;
+    int right = height.size();
+
+    while(left < right){
+        int size = left - right;
+        int s = min(height[left] , height[right]);
+        int total = size  * s;
+        maxVal = max(total,maxVal);
+        if(left < right){
+            left++;
+        }else{
+            right--;
+        }
     }
-    for(int i : ans){
-        cout<<i<<"s ";
-    }
-    cout<<ans.back();
+    cout << maxVal << endl;
     return 0;
 }
