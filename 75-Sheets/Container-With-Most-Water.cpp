@@ -46,5 +46,24 @@ vector<int> height = {1,8,6,2,5,4,8,3,7};
     }
     cout<<maxVal<<endl;
 
+
+//OPMTIMIZE CODE
+ int OmaxVal = 0;
+    int left = 0;
+    int right = height.size();
+
+    while(left < right){
+        int size =  right - left;
+        // cout<<size<<endl;
+        int s = min(height[left] , height[right]);
+        int total = size  * s;
+        OmaxVal = max(total,OmaxVal);
+        // cout<<maxVal<<endl;
+        if(height[left] < height[right]){
+            left++;
+        }else{
+            right--;
+        }
+    }
     return 0;
 }

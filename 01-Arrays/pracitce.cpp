@@ -18,11 +18,13 @@ int main(){
     int right = height.size();
 
     while(left < right){
-        int size = left - right;
+        int size =  right - left;
+        // cout<<size<<endl;
         int s = min(height[left] , height[right]);
         int total = size  * s;
         maxVal = max(total,maxVal);
-        if(left < right){
+        // cout<<maxVal<<endl;
+        if(height[left] < height[right]){
             left++;
         }else{
             right--;
