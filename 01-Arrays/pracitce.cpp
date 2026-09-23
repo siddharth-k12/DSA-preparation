@@ -9,28 +9,25 @@ using namespace std;
  
 int main(){
     
- vector<int> nums = {-1,0,3,5,7,12,15};
-   
- int start = 0 , end = nums.size();
- int target = 12;
+vector<int> nums = {4,5,6,7,0,1,2};
+vector<int> ans;
+ int start = 0 , end = nums.size() - 1;
  while (start < end)
  {
    /* code */
-   int mid = (start + end) / 2;
-   if(target == mid){
-      cout<<mid;
-      break;
-   }else if (target < mid)
-   {
-      /* code */
+   int mid = start + (end - start) / 2;
+   
+   if(nums[mid] > nums[end]){
       start = mid + 1;
    }else{
-      end = mid - 1;
-
+      end = mid;
    }
-   
  }
- 
+ cout<<nums[start];
+//  cout<<"s";
+//  for(int i : ans){
+//    cout<<i<<"value: ";
+//  }
 
     return 0;
 }
